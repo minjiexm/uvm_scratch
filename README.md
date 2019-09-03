@@ -78,3 +78,27 @@ Also add a simulation arg to vsim command:
 Compile/run then check the simulation log.
 
 You should see "Hellow world from UVM!" in the simulation log.
+
+
+## Stage 4: Generate a clock in verolog domain
+
+In testbench.sv, add an signal named clock;
+
+```
+module testbench();
+  logic clock;
+  ...
+endmodule : testbench
+```
+
+Here please try to implement below features for the clock signal with verilog methods.
+
+### Generate a clock which period can be controlled.
+
+### Add random skew(jitter) to the clock.
+
+### Phase of the clock can be controlled.
+
+### Duty cycle of the clock can be controlled.
+
+### The clock can be run time stopped and started.
