@@ -80,7 +80,7 @@ Compile/run then check the simulation log.
 You should see "Hellow world from UVM!" in the simulation log.
 
 
-## Stage 4: Generate a clock in verolog domain
+## Stage 4: Generate a clock in verilog domain
 
 In testbench.sv, add an signal named clock;
 
