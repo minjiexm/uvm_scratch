@@ -5,9 +5,7 @@
 ​         让我抛出我的一个问题吧。请产生一个频率为100MHz的时钟信号。我相信很多朋友就开始不屑一顾起来，这又什么难的？确实是很简单的，下面让我贴上我的答案：
 
 <details>
-<summary>展开查看</summary>
-<pre><code>
-
+<summary>时钟产生</summary>
 ```verilog
 //testbench.v
 module testbench();
@@ -24,8 +22,6 @@ module testbench();
 
 endmodule : testbench
 ```
-
-</code></pre>
 </details>
 
 
