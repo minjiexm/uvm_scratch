@@ -4,6 +4,10 @@
 
 ​         让我抛出我的一个问题吧。请产生一个频率为100MHz的时钟信号。我相信很多朋友就开始不屑一顾起来，这又什么难的？确实是很简单的，下面让我贴上我的答案：
 
+<details>
+<summary>展开查看</summary>
+<pre><code>
+
 ```verilog
 //testbench.v
 module testbench();
@@ -20,6 +24,10 @@ module testbench();
 
 endmodule : testbench
 ```
+
+</code></pre>
+</details>
+
 
 ​         怎么样，跟你们的答案一样么？请问我的答案是正确答案么？大家可以把我的程序保存成testbench.v, 然后用modelsim跑一下仿真看看波形。
 
