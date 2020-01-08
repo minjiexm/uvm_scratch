@@ -117,3 +117,32 @@ vsim -64 -view vsim.wlf
 ```
 
 我们可以发现时钟频率又回到了100MHz了。
+
+这里我们简单的介绍一下timescale的基本概念：
+1. `timescale 1ns / 1ps，含义为：时延单位为1ns，时延精度为1ps。`
+
+2. `在编译过程中，`timescale会影响其后面所有模块中的时延值，直至遇到另一个`timescale指令或`resetall指令。
+
+3. 当一个设计中的多个模块带有自身的`timescale编译指令时，模拟器将定位在所有模块的最小时延精度上，并且所有时延都相应地换算为最小时延精度。
+
+4. 在Verilog, SystemVerilog中打印 `timescale 使用**$printtimescale(***path***) **仿真器指令。
+
+
+请大家在testbench.sv里做一下试验：
+
+```verilog
+// top testbench module
+module testbench();
+  ....
+
+  initial begin
+    $printtimescale($root.testbench);// prints the timescale dut_i module instance
+  end 
+
+endmodule : testbench
+
+```
+
+当我们发现用时钟采样另外一根信号总是拿不到正确的值而总是找不到原因的时候，就可以试着检查模块的timescale是不是预期值了。
+
+
