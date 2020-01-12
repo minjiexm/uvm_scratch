@@ -16,9 +16,9 @@
 
 对于3来说，我们也需要将时钟频率作为输入送给module，修改后的代码如下：
 
-
 <details>
-  <summary>增加频率和使能控制的时钟产生模块</summary>
+  <summary>带参数的时钟产生模块</summary>
+
 ```verilog
 //File Name: clkgen.v
 // timescale
