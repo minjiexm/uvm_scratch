@@ -98,6 +98,7 @@ endmodule : testbench
 </details>
 
 
+
 下面是仿真结果的打印：
 
 ```shell
@@ -121,6 +122,10 @@ endmodule : testbench
 从ERROR的打印可以看出，我们成功的让时钟停止了1000ns，所以时钟周期变成了1010ns。所以我们并不需要观察波形就可以判断enable的功能工作正常。
 
 下面我们还需要测试一下动态改变时钟频率的功能。我们将测试enable的inital模块先注释掉，然后增加一段动态修改频率的inital代码：
+
+
+<details>
+<summary>Testbench</summary>
 
 ```verilog
 //File Name: testbench.sv
@@ -214,6 +219,10 @@ module testbench();
 endmodule : testbench
 
 ```
+
+</details>
+
+
 
 下面是仿真的打印信息：
 
