@@ -8,11 +8,11 @@
 2. 停止时钟。
 3. 动态改变时钟频率。
 
-如果我们将时钟控制模块作为DUT来看待的话，显然我们需要分别测试上面的3个特性。首先我们测试时钟的启动和停止功能，因此我们需要动态的将enable设置为0或者1。下面的代码中，我们将clk_num设置为1，仅仅实例化一个clock generator module， 并增加了一个inital的模块，用来设置enable为0，等待1000ns之后又设置为1。
+如果我们将时钟控制模块作为DUT来看待的话，显然我们需要分别测试上面的3个特性。首先我们测试时钟的启动和停止功能，因此我们需要动态的将enable设置为0或者1。下面的testbench代码中，我们将clk_num设置为1，仅仅实例化一个clock generator module， 并增加了一个inital的模块，用来设置enable为0，等待1000ns之后又设置为1。
 
 
 <details>
-<summary>时钟监控</summary>
+<summary>Testbench</summary>
 
 ```verilog
 //File Name: testbench.sv
